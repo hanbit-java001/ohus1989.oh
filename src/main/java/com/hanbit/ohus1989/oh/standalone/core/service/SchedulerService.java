@@ -1,11 +1,9 @@
 package com.hanbit.ohus1989.oh.standalone.core.service;
 
-
 import java.util.List;
 
 import com.hanbit.ohus1989.oh.standalone.core.vo.ScheduleVO;
 import com.hanbit.ohus1989.oh.standalone.dao.ScheduleDAO;
-
 
 public class SchedulerService {
 
@@ -25,12 +23,12 @@ public class SchedulerService {
 
 	public List<ScheduleVO> listSchedules(String startDt, String endDt) {
 
-		return null;
+		return scheduleDAO.selectSchedules(startDt, endDt);
 	}
 
 	public ScheduleVO getSchedule(String scheduleId) {
 
-		return null;
+		return scheduleDAO.selectSchedule(scheduleId);
 	}
 
 }
